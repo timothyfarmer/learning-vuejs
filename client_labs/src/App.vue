@@ -1,9 +1,11 @@
 <script>
   import {mapState} from 'vuex'
   import TopMenu from './components/TopMenu'
+  import Message from './components/message/Message'
   export default {
     components: {
-      TopMenu
+      TopMenu,
+      Message
     },
     created () {
       console.log('I have been created')
@@ -20,7 +22,7 @@
 
 <template>
   <div>
-    <pre>{{ userStore }}</pre>
+    <message></message>
     <top-menu></top-menu>
     <router-view></router-view>
   </div>
