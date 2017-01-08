@@ -4,15 +4,16 @@
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/dist/client_labs/src/components/user/userStore.js" />
         <item url="file://$PROJECT_DIR$/dist/client_labs/src/main.js" />
-        <item url="file://$PROJECT_DIR$/dist/client_labs/src/env.js" />
         <item url="file://$PROJECT_DIR$/dist/client_labs/src/store.js" />
+        <item url="file://$PROJECT_DIR$/dist/client_labs/src/components/message/messageStore.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
+      <root url="file://$PROJECT_DIR$/dist/client_labs/src/env.js" />
       <root url="file://$PROJECT_DIR$/dist/client_labs/src/components/user/userStore.js" />
       <root url="file://$PROJECT_DIR$/dist/client_labs/src/main.js" />
-      <root url="file://$PROJECT_DIR$/dist/client_labs/src/env.js" />
       <root url="file://$PROJECT_DIR$/dist/client_labs/src/store.js" />
+      <root url="file://$PROJECT_DIR$/dist/client_labs/src/components/message/messageStore.js" />
     </CLASSES>
     <SOURCES />
   </library>

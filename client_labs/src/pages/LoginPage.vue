@@ -1,4 +1,3 @@
-
 <script>
 import {mapState} from 'vuex'
 import {loginUrl, userUrl, getHeader} from './../config.js'
@@ -14,7 +13,8 @@ export default {
   },
   computed: {
     ...mapState({
-      userStore: state => state.userStore
+      userStore: state => state.userStore,
+      messageStore: state => state.messageStore
     })
   },
   methods: {
@@ -28,6 +28,7 @@ export default {
         scope: ''
       }
       const authUser = {}
+      const message = {}
       this.$http.post(loginUrl, postData)
         .then(response => {
           if (response.status === 200) {
@@ -42,6 +43,9 @@ export default {
                 authUser.name = response.body.name
                 window.localStorage.setItem('authUser', JSON.stringify(authUser))
                 this.$store.dispatch('setUserObject', authUser)
+                message.text = 'You have logged in!'
+                this.$store.dispatch('newMessage', message)
+                console.log('message sent')
                 this.$router.push({name: 'dashboard'})
               })
           }
