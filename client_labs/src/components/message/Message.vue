@@ -2,6 +2,8 @@
   /*
    * Message is used to give the user one-time status messages on
    * certain events such as "You have logged in"
+   *
+   * Author: Tim Farmer 1/8/17
    */
   import {mapState} from 'vuex'
   export default {
