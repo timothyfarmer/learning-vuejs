@@ -1,4 +1,8 @@
 <script>
+  /*
+   * Message is used to give the user one-time status messages on
+   * certain events such as "You have logged in"
+   */
   import {mapState} from 'vuex'
   export default {
     computed: {
