@@ -7,12 +7,17 @@ const state = {
 const actions = {
   newMessage: ({commit}, messageObj) => {
     commit('SET_MESSAGE', messageObj)
-    console.log('Message object', messageObj)
+  },
+  removeMessage: ({commit}, messageObj) => {
+    commit('REMOVE_MESSAGE', messageObj)
   }
 }
 
 const mutations = {
   SET_MESSAGE (state, messageObj) {
+    state.message = messageObj
+  },
+  REMOVE_MESSAGE (state, messageObj) {
     state.message = messageObj
   }
 }

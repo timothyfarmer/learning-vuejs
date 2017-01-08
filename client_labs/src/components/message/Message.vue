@@ -6,14 +6,11 @@
         text: state => state.messageStore.message.text
       })
     },
-    data () {
-      return {
-        isHidden: false
-      }
-    },
     methods: {
-      hide () {
-        this.isHidden = true
+      removeMessage () {
+        const message = {}
+        message.text = ''
+        this.$store.dispatch('removeMessage', message)
       }
     }
   }
@@ -21,15 +18,11 @@
 
 <template>
   <div class="message_wrapper">
-    <div class="alert alert-success alert-dismissible" v-if="text && !isHidden">
-      <ul>
-        <li>
-          {{text}}
-          <button class="close pull-right" aria-label="Close" @click="hide">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </li>
-      </ul>
+    <div class="alert alert-success" v-if="text">
+      {{text}}
+      <button class="close pull-right" aria-label="Close" @click="removeMessage">
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
   </div>
 </template>
