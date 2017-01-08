@@ -1,7 +1,9 @@
 <script>
   /*
    * Message is used to give the user one-time status messages on
-   * certain events such as "You have logged in"
+   * certain events such as "You have logged in".
+   *
+   * We are requiring to set the class if you want to color the element
    *
    * Author: Tim Farmer 1/8/17
    */
