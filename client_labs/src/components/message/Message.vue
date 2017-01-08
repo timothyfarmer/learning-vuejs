@@ -7,7 +7,7 @@
   export default {
     computed: {
       ...mapState({
-        text: state => state.messageStore.message.text
+        message: state => state.messageStore.message
       })
     },
     methods: {
@@ -22,8 +22,8 @@
 
 <template>
   <div class="message_wrapper">
-    <div class="alert alert-success" v-if="text">
-      {{text}}
+    <div class="alert alert-success" v-if="message.text">
+      {{message.text}}
       <button class="close pull-right" aria-label="Close" @click="removeMessage">
         <span aria-hidden="true">&times;</span>
       </button>
