@@ -7,7 +7,7 @@
       })
     },
     methods: {
-      hide () {
+      removeMessage () {
         const message = {}
         message.text = ''
         this.$store.dispatch('removeMessage', message)
@@ -20,7 +20,7 @@
   <div class="message_wrapper">
     <div class="alert alert-success" v-if="text">
       {{text}}
-      <button class="close pull-right" aria-label="Close" @click="hide">
+      <button class="close pull-right" aria-label="Close" @click="removeMessage">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
