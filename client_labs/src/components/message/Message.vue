@@ -22,7 +22,7 @@
 
 <template>
   <div class="message_wrapper">
-    <div class="alert alert-success" v-if="message.text">
+    <div class="alert" v-if="message.text" v-bind:class="message.class">
       {{message.text}}
       <button class="close pull-right" aria-label="Close" @click="removeMessage">
         <span aria-hidden="true">&times;</span>

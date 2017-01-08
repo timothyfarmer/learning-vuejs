@@ -44,6 +44,7 @@ export default {
                 window.localStorage.setItem('authUser', JSON.stringify(authUser))
                 this.$store.dispatch('setUserObject', authUser)
                 message.text = 'You have logged in!'
+                message.class = 'alert-warning'
                 this.$store.dispatch('newMessage', message)
                 console.log('message sent')
                 this.$router.push({name: 'dashboard'})
